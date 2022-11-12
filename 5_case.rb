@@ -3,13 +3,15 @@ print "Enter name:"
 # `chomp` removes newline from input
 name = gets.chomp
 
-case name
-when name[0].start_with?('J')
+case name[0]
+when 'J', 'j'
   puts "Your name starts with `J`"
-  exit
-when name[0].start_with?('A')
+when 'A', 'a'
   puts "Your name starts with `A`"
-  exit
 else
   puts "Something else"
 end
+
+# ternary operator
+puts (name == 'Alice') ? 'Hi, Alice!' : 'Hello!'
+
